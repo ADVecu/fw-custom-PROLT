@@ -24,7 +24,7 @@ pins:
   - pin: B1
     meta: MM100_INJ4
     class: outputs
-    ts_name: B1 - LS Output 1 / Injector 4
+    ts_name: B1 - Injector 4
 
   - pin: B2
     meta: MM100_IN_IAT_ANALOG
@@ -99,9 +99,19 @@ pins:
   - pin: G3
     meta: MM100_OUT_PWM1
     class: outputs
-    ts_name: G3 - LS Output 2
+    ts_name: G3 - LS Output 1
 
   - pin: G4
     meta: MM100_OUT_PWM2
     class: outputs
-    ts_name: G4 - LS Output 3
+    ts_name: G4 - LS Output 2
+  
+  - pin: H1
+    meta: MM100_INJ5
+    class: outputs
+    ts_name: A3 - LS Output 3
+  
+  - pin: H2
+    meta: MM100_INJ6
+    class: outputs
+    ts_name: D4 - LS Output 4
