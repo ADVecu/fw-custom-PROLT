@@ -12,6 +12,14 @@ static void customBoardDefaultConfiguration() {
     setHellenMegaEnPin();
     setHellenMMbaro();
 
+    engineConfiguration->displayLogicLevelsInEngineSniffer = true;
+	engineConfiguration->globalTriggerAngleOffset = 0;
+	engineConfiguration->canTxPin = Gpio::MM100_CAN_TX;
+	engineConfiguration->canRxPin = Gpio::MM100_CAN_RX;
+	engineConfiguration->fanPin = Gpio::MM100_OUT_PWM1;
+	engineConfiguration->fuelPumpPin = Gpio::MM100_OUT_PWM2;
+	engineConfiguration->tachOutputPin = Gpio::MM100_INJ5;
+    
     engineConfiguration->injectionPins[0] = Gpio::MM100_INJ1;
 	engineConfiguration->injectionPins[1] = Gpio::MM100_INJ2;
 	engineConfiguration->injectionPins[2] = Gpio::MM100_INJ3;
@@ -29,14 +37,6 @@ static void customBoardDefaultConfiguration() {
 	engineConfiguration->triggerInputPins[0] = Gpio::MM100_UART8_TX; // VR2 max9924 is the safer default
 	engineConfiguration->camInputs[0] = Gpio::MM100_IN_D1;
 
-    engineConfiguration->displayLogicLevelsInEngineSniffer = true;
-	engineConfiguration->globalTriggerAngleOffset = 0;
-	engineConfiguration->canTxPin = Gpio::MM100_CAN_TX;
-	engineConfiguration->canRxPin = Gpio::MM100_CAN_RX;
-	engineConfiguration->fanPin = Gpio::MM100_OUT_PWM1;
-	engineConfiguration->fuelPumpPin = Gpio::MM100_OUT_PWM2;
-	engineConfiguration->tachOutputPin = Gpio::MM100_INJ5;
-    
     // PWM pin
 	engineConfiguration->stepperDcIo[0].controlPin = Gpio::MM100_OUT_PWM3;
 	// DIR pin
@@ -50,14 +50,11 @@ static void customBoardDefaultConfiguration() {
 	// Disable pin
 	engineConfiguration->stepperDcIo[1].disablePin = Gpio::MM100_USB1ID;
 
-    setupDefaultSensorInputs();
-
     engineConfiguration->enableVerboseCanTx = true;
 	engineConfiguration->injectionMode = IM_BATCH;
 	engineConfiguration->etbFunctions[0] = DC_None;
 
     setCrankOperationMode();
-    setAlgorithm(LM_SPEED_DENSITY);
 
     setCommonNTCSensor(&engineConfiguration->clt, HELLEN_DEFAULT_AT_PULLUP);
 	setCommonNTCSensor(&engineConfiguration->iat, HELLEN_DEFAULT_AT_PULLUP);
@@ -65,6 +62,7 @@ static void customBoardDefaultConfiguration() {
 	setTPS1Calibration(100, 650);
 
 }
+
 
 void setup_custom_board_overrides() {
 	custom_board_DefaultConfiguration = customBoardDefaultConfiguration;
