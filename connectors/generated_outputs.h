@@ -8,20 +8,24 @@ Gpio GENERATED_OUTPUTS[] = {
 	Gpio::MM100_IGN2, // A2 - Coil 2
 	Gpio::MM100_IGN3, // A3 - Coil 3
 	Gpio::MM100_INJ5, // A4 - Tach Output
-	Gpio::MM100_INJ4, // B1 - LS Output 1 / Injector 4
+	Gpio::MM100_INJ4, // B1 - Injector 4
 	Gpio::MM100_INJ3, // C1 - Injector 3
 	Gpio::MM100_INJ2, // D1 - Injector 2
 	Gpio::MM100_INJ1, // E1 - Injector 1
-	Gpio::MM100_OUT_PWM1, // G3 - LS Output 2
-	Gpio::MM100_OUT_PWM2, // G4 - LS Output 3
+	Gpio::MM100_OUT_PWM1, // G3 - LS Output 1
+	Gpio::MM100_OUT_PWM2, // G4 - LS Output 2
+	Gpio::MM100_INJ6, // A3 - LS Output 3
+	Gpio::MM100_INJ7, // D4 - LS Output 4
 // "A1 - Coil 1",
 // "A2 - Coil 2",
 // "A3 - Coil 3",
 // "A4 - Tach Output",
-// "B1 - LS Output 1 / Injector 4",
+// "B1 - Injector 4",
 // "C1 - Injector 3",
 // "D1 - Injector 2",
 // "E1 - Injector 1",
-// "G3 - LS Output 2",
-// "G4 - LS Output 3",
+// "G3 - LS Output 1",
+// "G4 - LS Output 2",
+// "A3 - LS Output 3",
+// "D4 - LS Output 4",
 }
